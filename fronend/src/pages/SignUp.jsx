@@ -35,11 +35,9 @@ const SignUp = () => {
       if (response.status === 201) {
         toast.success('Registered successfully!');
             // Save user data to localStorage
-      const { token, user } = response.data; // adjust according to your backend response
-      localStorage.setItem('user', JSON.stringify(user));
-      localStorage.setItem('token', token); 
+
         setTimeout(() => {
-          navigate('/userdashboard');
+          navigate('/signin');
         }, 1500);
       }
     } catch (err) {
@@ -104,10 +102,10 @@ const SignUp = () => {
             </button>
           </form>
 
-          <p className="mt-4 text-sm text-center text-gray-600">
+          <p className="mt-4 text-sm text-center  text-gray-600 ">
             Already have an account? 
-            <Link to="/signin">
-              <p className="text-green-500 hover:underline">Sign In</p>
+            <Link to="/signin" className='text-green-500 hover:underline'>
+            Sign In
             </Link>
           </p>
         </div>
