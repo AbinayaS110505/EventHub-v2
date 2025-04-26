@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link,useNavigate } from 'react-router-dom'; // Import Link
+import { Link,useNavigate } from 'react-router-dom'; 
 import HeroImage from '../assets/img/LandingPage.jpg';
 import CalendarIcon from '../assets/img/calander feature.svg';
 import GuestsIcon from '../assets/img/guest.svg';
@@ -25,9 +25,8 @@ function LandingPage() {
       <p className="text-lg text-gray-700 mb-6">
         From intimate gatherings to grand celebrations, EventHub empowers you with AI-driven tools to create memorable experiences.
       </p>
-      {/* Use Link for navigation */}
       <Link
-        to="/signup" // Target path for signup
+        to="/signup" 
         className="bg-indigo-600 text-white font-semibold py-3 px-6 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
       >
         Get Started for Free
@@ -81,9 +80,9 @@ function LandingPage() {
     <p className="text-lg text-gray-700 mb-8">
       Join EventHub today and experience the future of event management.
     </p>
-    {/* Use Link for navigation */}
+  
     <Link
-      to="/signup" // Target path for signup
+      to="/signup" 
       className="bg-indigo-600 text-white font-semibold py-3 px-6 rounded-md text-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
     >
       Sign Up Now

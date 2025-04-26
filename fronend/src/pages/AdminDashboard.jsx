@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import AdminNav from '../components/AdminNav';
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css'; // import CSS
+import 'react-toastify/dist/ReactToastify.css';
 
 const AdminDashboard = () => {
   const [events, setEvents] = useState([]);
@@ -11,7 +11,7 @@ const AdminDashboard = () => {
     date: '',
     time: '',
     place: '',
-    availableSeats: '', // added availableSeats
+    availableSeats: '', 
   });
   const [showUserDetails, setShowUserDetails] = useState(false);
   const [selectedEventId, setSelectedEventId] = useState('');
@@ -48,10 +48,10 @@ const AdminDashboard = () => {
         date: formData.date,
         time: formData.time,
         place: formData.place,
-        availableSeats: formData.availableSeats, // send availableSeats
+        availableSeats: formData.availableSeats,
       });
       setFormData({ name: '', date: '', time: '', place: '', availableSeats: '' });
-      fetchEvents(); // Refresh list
+      fetchEvents(); 
       toast.success('Event added successfully! 🎉');
     } catch (error) {
       console.error('Error adding event:', error);
@@ -80,7 +80,6 @@ const AdminDashboard = () => {
       <h1 className="text-3xl font-bold text-center text-blue-700 mb-6 p-7">Organization Dashboard</h1>
 
       <div className="grid md:grid-cols-3 gap-6">
-        {/* Event Form */}
         <div className="bg-white p-6 rounded-xl shadow-md md:col-span-2">
           <h2 className="text-xl font-semibold mb-4">Add New Event</h2>
           <form onSubmit={handleAddEvent} className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -134,8 +133,6 @@ const AdminDashboard = () => {
               Add Event
             </button>
           </form>
-
-          {/* Event List */}
           <div className="mt-6">
             <h2 className="text-lg font-semibold mb-3">Event List</h2>
             {events.length === 0 ? (
@@ -166,7 +163,6 @@ const AdminDashboard = () => {
           </div>
         </div>
 
-        {/* Users Info */}
         <div className="bg-white p-6 rounded-xl shadow-md">
           <h2 className="text-xl font-semibold mb-4">Users Info</h2>
 
@@ -207,8 +203,6 @@ const AdminDashboard = () => {
           )}
         </div>
       </div>
-
-      {/* Toast Container */}
       <ToastContainer position="top-center" autoClose={2000} />
     </div>
   );

@@ -34,7 +34,7 @@ const SignUp = () => {
 
       if (response.status === 201) {
         toast.success('Registered successfully!');
-            // Save user data to localStorage
+         
 
         setTimeout(() => {
           navigate('/signin');
@@ -48,7 +48,7 @@ const SignUp = () => {
   return (
     <>
       <Navbar />
-      <Toaster position="top-center" reverseOrder={false} />  {/* Toast container */}
+      <Toaster position="top-center" reverseOrder={false} />  
 
       <div className="min-h-screen flex items-center justify-center bg-gray-100 p-4">
         <div className="w-full max-w-md bg-white rounded-2xl shadow-md p-8">

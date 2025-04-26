@@ -1,11 +1,9 @@
-// routes/eventRoutes.js
 
 const express = require("express");
 const router = express.Router();
 const Event = require("../models/Event");
 const User = require("../models/User");
 
-// Get all events
 router.get("/all", async (req, res) => {
   try {
     const events = await Event.find().populate('createdBy', 'name email'); // populate user info if needed
@@ -15,12 +13,10 @@ router.get("/all", async (req, res) => {
   }
 });
 
-// Add new event
 router.post("/add", async (req, res) => {
   try {
     const { name, place, date, time, availableSeats, createdBy } = req.body;
 
-    // Basic validation
     if (!name || !place || !date || !time) {
       return res.status(400).json({ message: "Please provide all required fields" });
     }
@@ -43,7 +39,6 @@ router.post("/add", async (req, res) => {
   }
 });
 
-// Edit/update event
 router.put("/edit/:id", async (req, res) => {
   try {
     const { id } = req.params;
@@ -61,7 +56,6 @@ router.put("/edit/:id", async (req, res) => {
   }
 });
 
-// Delete event
 router.delete("/delete/:id", async (req, res) => {
   try {
     const { id } = req.params;
@@ -79,7 +73,6 @@ router.delete("/delete/:id", async (req, res) => {
   }
 });
 
-// Get events created by a specific user
 router.get("/user/:id", async (req, res) => {
   try {
     const { id } = req.params;

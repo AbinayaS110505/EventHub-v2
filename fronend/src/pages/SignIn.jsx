@@ -27,14 +27,13 @@ const SignIn = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
   
-    // Admin login shortcut
     if (formData.email === adminEmail && formData.password === adminPassword && formData.role === adminRole) {
       toast.success('Admin signed in!');
       navigate('/admindashboard');
-      return;  // very important! Stop here
+      return;  
     }
   
-    // Normal user login
+ 
     try {
       const response = await axios.post('http://localhost:5000/api/auth/login', formData);
   
@@ -61,7 +60,7 @@ const SignIn = () => {
   return (
     <>
       <Navbar />
-      <Toaster position="top-center" reverseOrder={false} />  {/* Toast container */}
+      <Toaster position="top-center" reverseOrder={false} />  
 
       <div className="min-h-screen flex items-center justify-center bg-gray-100 p-4">
         <div className="w-full max-w-md bg-white rounded-2xl shadow-md p-8">

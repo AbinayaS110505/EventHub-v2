@@ -1,6 +1,6 @@
 import React from 'react'
 import Logo from '../assets/img/event-logo.jpg';
-import { Link } from 'react-router-dom'; // Import Link
+import { Link } from 'react-router-dom'; 
 const Navbar = () => {
   return (
     <div>
@@ -11,24 +11,22 @@ const Navbar = () => {
             <span className="font-semibold text-xl text-indigo-600">EventHub</span>
           </div>
           <div className="hidden md:flex space-x-6">
-            
-            {/* Use Link for navigation */}
+          
             <Link
-              to="/signup" // Target path for signup
+              to="/signup"
               className="bg-indigo-600 text-white font-semibold py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
             >
               Sign Up
             </Link>
-            {/* Use Link for navigation */}
+           
             <Link
-              to="/signIn" // Target path for login
+              to="/signIn" 
               className="text-indigo-600 font-semibold hover:text-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
             >
               Log In
             </Link>
           </div>
           <div className="md:hidden">
-            {/* Mobile menu button - you'd typically add functionality here */}
             <button className="text-gray-500 hover:text-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
               ☰
             </button>

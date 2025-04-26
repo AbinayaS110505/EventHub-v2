@@ -5,11 +5,11 @@
     margin: 20px auto;
     display: flex;
     flex-direction: column;
-    border: 2px solid #ddd;
+    border: 2px solid #00000065;
     border-radius: 12px;
     overflow: hidden;
     background-color: rgb(252, 195, 195);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 16px rgba(20, 18, 18, 0.1);
   }
   
   .messages {
@@ -44,7 +44,7 @@
   .input-area {
     display: flex;
     padding: 15px;
-    background-color: #fff;
+    background-color: #afadad;
     border-top: 1px solid #ddd;
   }
   
@@ -76,7 +76,7 @@
   .top-bar {
     background-color: #f9f9f9;
     padding: 10px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #7e0474;
     display: flex;
     align-items: center;
   }
@@ -126,6 +126,6 @@
   }
   
   .bot p {
-    margin: 8px 0; /* Space between paragraphs */
+    margin: 8px 0; 
   }
   

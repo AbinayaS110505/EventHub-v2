@@ -30,7 +30,6 @@ const ChatbotPage = () => {
 
       let botReply = res.data.candidates[0]?.content?.parts[0]?.text || "Sorry, I didn't understand that.";
 
-      // Clean and format bot reply
       botReply = formatBotReply(botReply);
 
       const botMessage = { sender: 'bot', text: botReply };
@@ -45,20 +44,18 @@ const ChatbotPage = () => {
   };
 
   const formatBotReply = (text) => {
-    // Remove unnecessary blank spaces
+   
     let cleaned = text.trim();
 
-    // Replace double line breaks with paragraph breaks
     cleaned = cleaned.replace(/\n{2,}/g, '</p><p>');
 
-    // Replace single line breaks with space
     cleaned = cleaned.replace(/\n/g, ' ');
 
-    return `<p>${cleaned}</p>`; // Wrap inside paragraph tags
+    return `<p>${cleaned}</p>`; 
   };
 
   const handleBack = () => {
-    navigate('/userdashboard'); // Navigate to Home Page
+    navigate('/userdashboard'); 
   };
 
   useEffect(() => {

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { FaUserTie } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';  // ✅ Import useNavigate
+import { useNavigate } from 'react-router-dom';  
 
 const AdminNav = ({ adminName = 'Admin', totalEvents = 0 }) => {
   const [showProfile, setShowProfile] = useState(false);
-  const navigate = useNavigate();  // ✅ Create navigate function
+  const navigate = useNavigate();  
 
   const toggleProfile = () => {
     setShowProfile(!showProfile);
@@ -13,15 +13,14 @@ const AdminNav = ({ adminName = 'Admin', totalEvents = 0 }) => {
   const handleLogout = () => {
     alert('Logged out!');
     setShowProfile(false);
-    navigate('/');  // ✅ Navigate to home after logout
+    navigate('/');  
   };
 
   return (
     <div className="bg-white shadow-md px-6 py-3 flex justify-between items-center">
-      {/* Logo */}
+    
       <div className="text-2xl font-bold text-blue-700"> AdminPanel</div>
 
-      {/* Nav Links */}
       <div className="flex gap-6 text-gray-700 font-medium">
         <a href="#dashboard" className="hover:text-blue-600 transition">Dashboard</a>
       </div>
@@ -32,7 +31,6 @@ const AdminNav = ({ adminName = 'Admin', totalEvents = 0 }) => {
           onClick={toggleProfile}
         />
 
-        {/* Profile Popup */}
         {showProfile && (
           <div className="absolute right-0 mt-2 w-80 bg-white border border-gray-200 rounded-2xl shadow-lg z-50 p-4 animate-fadeIn">
             <div className="flex justify-between items-center mb-4">

@@ -2,22 +2,20 @@ import React, { useState, useEffect } from 'react';
 import ProfileNav from '../components/ProfileNav';
 import '../assets/css/index.css'; 
 import { Link } from 'react-router-dom';
-import axios from 'axios'; // Import axios
-
+import axios from 'axios';
 const UserDashboard = () => {
   const [events, setEvents] = useState([]);
   const [filters, setFilters] = useState({ place: '', date: '' });
   const [bookedEvents, setBookedEvents] = useState([]);
   const [successMsg, setSuccessMsg] = useState('');
-  const [loading, setLoading] = useState(true); // Loading state
+  const [loading, setLoading] = useState(true); 
   const [error, setError] = useState('');
 
   useEffect(() => {
-    // Fetch events from backend
     const fetchEvents = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/event/all'); // Update if your backend URL/port is different
-        setEvents(response.data);
+        const response = await axios.get('http://localhost:5000/api/event/all'); 
+             setEvents(response.data);
         setLoading(false);
       } catch (err) {
         console.error('Error fetching events:', err.message);
@@ -96,7 +94,6 @@ const UserDashboard = () => {
 
       <h1 className="text-4xl font-bold text-center text-gray-800 mb-10 p-7">Explore Events</h1>
 
-      {/* Filters */}
       <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-10">
         <input
           type="text"
@@ -115,14 +112,12 @@ const UserDashboard = () => {
         />
       </div>
 
-      {/* Success Message */}
       {successMsg && (
         <div className="mb-6 text-center text-green-700 font-semibold text-lg animate-pulse">
           {successMsg}
         </div>
       )}
 
-      {/* Events */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredEvents.length > 0 ? (
           filteredEvents.map((event) => {
