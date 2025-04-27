@@ -63,7 +63,6 @@ MONGODB_URI=your_mongodb_connection_string_here
 JWT_SECRET=your_secret_key_here
 PORT=5000
 OPENAI_API_KEY=your_openai_api_key_here  # optional, if using AI features
-FRONTEND_URL=http://localhost:3000
 ```
 
 You can refer to the `.env.example` provided.
