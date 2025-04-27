@@ -70,6 +70,38 @@ You can refer to the `.env.example` provided.
 ---
 
 
+**deployment steps:**
+
+
+# Deploy MERN Stack App on AWS EC2 - Step Titles
+
+## Prerequisites
+
+## Step 1: Creating an EC2 Instance
+
+## Step 2: Setting Up an Elastic IP
+
+## Step 3: Editing Security Groups
+
+## Step 4: Connecting to the EC2 Instance
+
+## Step 5: Installing Required Software on Ubuntu
+- Install Node.js and npm
+- Set Up MongoDB Atlas
+- Install PM2
+- Configure UFW Firewall
+- Install NGINX
+
+## Step 6: Cloning the Repository
+- Set Up the Backend
+- Set Up the Frontend
+
+## Step 7: Configuring NGINX
+
+## Step 8: Verify Deployment
+- Access the Application
+- Test Application Features
+
 ##  Usage Guide
 
 - **Create an Event**: Add title, date, location, and description (can be AI-generated).
