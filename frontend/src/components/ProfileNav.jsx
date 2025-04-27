@@ -9,7 +9,6 @@ const ProfileNav = () => {
   const toggleProfile = () => {
     setShowProfile(!showProfile);
   };
-
   const logout = () => {
     localStorage.removeItem('user');
     navigate('/');

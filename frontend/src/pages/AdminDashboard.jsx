@@ -15,10 +15,9 @@ const AdminDashboard = () => {
   });
   const [showUserDetails, setShowUserDetails] = useState(false);
   const [selectedEventId, setSelectedEventId] = useState('');
-
   const registrations = [
-    { id: 1, userName: 'Alice', eventId: 1 },
-    { id: 2, userName: 'Bob', eventId: 2 },
+    // { id: 1, userName: 'Alice', eventId: 1 },
+    // { id: 2, userName: 'Bob', eventId: 2 },
     { id: 3, userName: 'Charlie', eventId: 1 },
     { id: 4, userName: 'Daisy', eventId: 2 },
   ];

@@ -13,7 +13,6 @@ const ChatbotPage = () => {
 
   const sendMessage = async () => {
     if (!input.trim()) return;
-
     const userMessage = { sender: 'user', text: input };
     setMessages(prev => [...prev, userMessage]);
 

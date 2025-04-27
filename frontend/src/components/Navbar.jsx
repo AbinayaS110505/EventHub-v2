@@ -3,7 +3,7 @@ import Logo from '../assets/img/event-logo.jpg';
 import { Link } from 'react-router-dom'; 
 const Navbar = () => {
   return (
-    <div>
+        <div>
          <nav className="bg-white shadow py-4">
         <div className="container mx-auto flex items-center justify-between px-4">
           <div className="flex items-center">

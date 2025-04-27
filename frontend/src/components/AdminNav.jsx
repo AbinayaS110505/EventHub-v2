@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { FaUserTie } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';  
-
 const AdminNav = ({ adminName = 'Admin', totalEvents = 0 }) => {
   const [showProfile, setShowProfile] = useState(false);
   const navigate = useNavigate();  
@@ -9,7 +8,6 @@ const AdminNav = ({ adminName = 'Admin', totalEvents = 0 }) => {
   const toggleProfile = () => {
     setShowProfile(!showProfile);
   };
-
   const handleLogout = () => {
     alert('Logged out!');
     setShowProfile(false);
