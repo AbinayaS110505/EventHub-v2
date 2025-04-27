@@ -24,8 +24,7 @@ const ProfileNav = () => {
   return (
     <div className="bg-white shadow-md px-6 py-3 flex justify-between items-center">
       <div className="text-2xl font-bold text-purple-700">🎫 EventEase</div>
-
-\      <div className="flex gap-6 text-gray-700 font-medium">
+     <div className="flex gap-6 text-gray-700 font-medium">
         <a href="#home" className="hover:text-purple-600 transition">Home</a>
       </div>
 
